@@ -64,9 +64,21 @@ switch (enrolled) {
 
 let seats = 30;
 let takenSeats = 3;
+let title = "Siedzenia"
 
-console.log(`Wszystkie miejsca : ${seats}`);
-console.log(`Zajęte miejsca: ${takenSeats}`);
+function freeseats(seats, takenSeats)
+{
+    return seats - takenSeats;
+}
+
+function seatsDesc(title, seats, takenSeats)
+{
+    return `Tytul: ${title}, Wszystkie siedzenia: ${seats}, Wolne siedzenia: ${takenSeats}`;
+}
+
+const wolne = freeseats(seats, takenSeats);
+
+console.log(seatsDesc(title, seats, takenSeats));
 
 switch(takenSeats)
 {
